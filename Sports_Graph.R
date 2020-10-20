@@ -15,13 +15,17 @@ for (i in 1:nrow(rawdata)){
   if (rawdata[i,2]=="UW"){
     if (i == 1){
       table[i,2]<-rawdata[i,3]
+      table[i,3] <-0
     }else {table[i,2]<- (table[(i-1),2]+rawdata[i,3])
+    table[i,3] <- table[(i-1),3]
     }
   }
-  else (rawdata[i,2]== "MSU")
+  else 
         if (i == 1){
           table[i,3]<-rawdata[i,3]
+          table[i,2]<- 0
         }else {table[i,3]<- (table[(i-1),3]+rawdata[i,3])
+        table[i,2]<- table[(i-1),2]
         }
 }
 
