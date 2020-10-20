@@ -34,7 +34,7 @@ for (i in 1:nrow(rawdata)){#designates set to length of data set
 
 #create plot using data for UW
 par(col="blue") #Set UW line to blue
-plot(table$Time,table$`UW Score`,type='l',main="MSU vs UW over Time", xlab="Time(min)",ylab="Score")
+plot(table$Time,table$`UW Score`,type='l',main="MSU vs UW over Time \n UW = Blue \n MSU = Red" , xlab="Time(min)",ylab="Score")
 par(col = "Red") #Set MSU line to red
 #Add MSU scores
 lines(table$Time,table$`MSU Score`)
