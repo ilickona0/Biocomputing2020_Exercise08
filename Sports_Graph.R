@@ -32,11 +32,12 @@ for (i in 1:nrow(rawdata)){#designates set to length of data set
 
 #PLOTTING
 
-for (k in 1:nrow(table)){
-plot(table[k,1],table[k,2],type="1",) #plot UW score vs time
-
-lines(table[k,1],table[k,3],type="1") #Add MSU score vs time
-}
+#create plot using data for UW
+par(col="blue") #Set UW line to blue
+plot(table$Time,table$`UW Score`,type='l',main="MSU vs UW over Time", xlab="Time(min)",ylab="Score")
+par(col = "Red") #Set MSU line to red
+#Add MSU scores
+lines(table$Time,table$`MSU Score`)
 
 
 
